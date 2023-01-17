@@ -1,4 +1,4 @@
-package com.example.finder.ui.theme
+package com.example.finder.presentation.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

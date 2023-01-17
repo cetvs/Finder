@@ -1,4 +1,4 @@
-package com.example.finder.ui.theme
+package com.example.finder.presentation.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
