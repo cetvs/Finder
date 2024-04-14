@@ -1,0 +1,11 @@
+[versions]
+ktx = "1.7.0"
+koin = "3.2.0"
+nav_compose = "2.4.0"
+
+[libraries]
+androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
+koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin" }
+navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "nav_compose" }
+
+[plugins]

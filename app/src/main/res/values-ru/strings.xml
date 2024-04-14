@@ -1,0 +1,7 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation">
+    //auth
+    <string name="app_name">Finder</string>
+    <string name="phone_number_title">Номер</string>
+    <string name="phone_number_subtitle">Введите пожалуйста номер и пароль</string>
+    <string name="bottom_button">Продолжить</string>
+</resources>
