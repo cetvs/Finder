@@ -8,10 +8,12 @@ ktx = "1.7.0"
 koin = "3.2.0"
 lifecycleRuntimeKtx = "2.3.1"
 material = "1.1.1"
+materialVersion = "1.6.7"
 nav_compose = "2.4.0"
 retrofit = "2.5.0"
 uiToolingPreview = "1.2.0"
 ui = "1.2.0"
+material3Android = "1.2.1"
 
 [libraries]
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
@@ -20,6 +22,7 @@ androidx-junit = { module = "androidx.test.ext:junit", version.ref = "junitVersi
 androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
 androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 androidx-material = { module = "androidx.compose.material:material", version.ref = "material" }
+androidx-material-v167 = { module = "androidx.compose.material:material", version.ref = "materialVersion" }
 androidx-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "uiToolingPreview" }
 androidx-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "uiToolingPreview" }
 androidx-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "uiToolingPreview" }
@@ -30,5 +33,6 @@ junit = { module = "junit:junit", version.ref = "junit" }
 koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin" }
 navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "nav_compose" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+androidx-material3-android = { group = "androidx.compose.material3", name = "material3-android", version.ref = "material3Android" }
 
 [plugins]

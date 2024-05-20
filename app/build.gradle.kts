@@ -47,7 +47,6 @@ android {
 }
 
 dependencies {
-    val work_version = "2..0"
 
     implementation(libs.androidx.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
