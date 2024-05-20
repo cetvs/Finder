@@ -1,9 +1,9 @@
 package com.example.finder.feature.auth.domain.usecases
 
-import com.example.finder.feature.auth.data.AuthRepository
+import com.example.finder.feature.auth.domain.AuthRepository
 
-class AuthInteractor(authRepository: AuthRepository) {
-    fun interact() {
-
+class AuthInteractor(private val authRepository: AuthRepository) {
+    suspend fun registerUser(phoneNumber: String) {
+        authRepository.registerUser(phoneNumber)
     }
 }

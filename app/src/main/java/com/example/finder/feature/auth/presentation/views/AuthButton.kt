@@ -17,7 +17,7 @@ import com.example.finder.presentation.theme.Pink
 fun AuthButton(text: String, onClick: (() -> Unit)? = null) {
     Button(
         onClick = onClick ?: {},
-        shape = RoundedCornerShape(15),
+        shape = RoundedCornerShape(30),
         colors = ButtonDefaults.buttonColors(backgroundColor = Pink),
         modifier = Modifier
             .fillMaxWidth()
