@@ -4,4 +4,5 @@
     <string name="phone_number_title">Номер</string>
     <string name="phone_number_subtitle">Введите пожалуйста свой корректный номер телефона</string>
     <string name="bottom_button">Продолжить</string>
+    <string name="all_chats_title">Сообщения</string>
 </resources>

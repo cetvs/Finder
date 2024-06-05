@@ -3,4 +3,5 @@
     <string name="phone_number_title">My mobile</string>
     <string name="phone_number_subtitle">Enter your number and password</string>
     <string name="bottom_button">Confirm</string>
+    <string name="all_chats_title">Message</string>
 </resources>
