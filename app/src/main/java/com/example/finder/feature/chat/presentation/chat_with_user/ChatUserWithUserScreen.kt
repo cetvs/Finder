@@ -2,6 +2,7 @@ package com.example.finder.feature.chat.presentation.chat_with_user
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.Button
@@ -11,10 +12,12 @@ import androidx.compose.material.Text
 import androidx.compose.material.TextField
 import androidx.compose.material.TextFieldDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.KeyboardType
@@ -46,33 +49,48 @@ private fun ChatHeader() {
 @Composable
 private fun MessagesList() {
 //    Box(modifier = Modifier.fillMaxSize()) {
-        LazyColumn() {
-            item {
-                Text(text = "пустой текст")
-            }
+
+    val message by koinViewModel<ChatViewModel>().messages.collectAsState()
+    LazyColumn() {
+        item {
+            Text(text = message?.content ?: "")
         }
+    }
+//    val messages by koinViewModel<ChatViewModel>().messages.collectAsState()
+//    LazyColumn(modifier = Modifier.fillMaxSize()) {
+//        items(messages) { message ->
+//            MessageItem(message = message) // Ваш composable для отображения сообщения
+//        }
+//    }
 //    }
 }
 
 @Composable
+private fun MessageItem(message: Int) {
+
+}
+
+@Composable
 private fun MessagesBody() {
-    MessagesList()
-    Divider(color = LightGray, thickness = 1.dp)
-    Row {
-        MessageTextField()
+    Column {
+        MessagesList()
+        Spacer(modifier = Modifier.weight(1f))
+        Divider(color = LightGray, thickness = 1.dp)
+        Row {
+            MessageTextField()
+        }
     }
 }
 
-
 @Composable
 fun MessageTextField() {
-    var text by remember { mutableStateOf("") }
+    var messageText by remember { mutableStateOf("") }
     val chatViewModel: ChatViewModel = koinViewModel()
 
     Row {
         TextField(
-            value = text,
-            onValueChange = { text = it },
+            value = messageText,
+            onValueChange = { messageText = it },
             label = { Text("Введите текст") },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
             colors = TextFieldDefaults.textFieldColors(
@@ -82,7 +100,7 @@ fun MessageTextField() {
                 unfocusedIndicatorColor = Color.Transparent,
             )
         )
-        Button(onClick = {}){
+        Button(onClick = { chatViewModel.sendMessage(messageText) }) {
             Icon(
                 painterResource(id = R.drawable.search),
                 contentDescription = null,
