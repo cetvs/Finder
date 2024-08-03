@@ -2,9 +2,6 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
-      <entry key="ChatRow">
-        <State />
-      </entry>
       <entry key="app">
         <State>
           <targetSelectedWithDropDown>
@@ -13,13 +10,16 @@
               <deviceKey>
                 <Key>
                   <type value="VIRTUAL_DEVICE_PATH" />
-                  <value value="C:\Users\mrcet\.android\avd\Medium_Phone_API_31.avd" />
+                  <value value="$USER_HOME$/.android/avd/Pixel_6_Pro_API_29.avd" />
                 </Key>
               </deviceKey>
             </Target>
           </targetSelectedWithDropDown>
-          <timeTargetWasSelectedWithDropDown value="2024-04-14T10:58:03.438423800Z" />
+          <timeTargetWasSelectedWithDropDown value="2024-07-23T08:43:40.045247Z" />
         </State>
+      </entry>
+      <entry key="feature">
+        <State />
       </entry>
     </value>
   </component>

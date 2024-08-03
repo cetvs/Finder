@@ -14,3 +14,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Finder"
 include(":app")
+include(":features")
+include(":features:chat")
+include(":common")

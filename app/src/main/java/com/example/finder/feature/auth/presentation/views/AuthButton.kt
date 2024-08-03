@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.example.finder.presentation.theme.Pink
+import com.finder.common.theme.Pink
 
 @Composable
 fun AuthButton(text: String, onClick: (() -> Unit)? = null) {

@@ -6,8 +6,8 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.finder.feature.chat.presentation.all_chats.AllChatsScreen
-import com.example.finder.feature.chat.presentation.chat_with_user.ChatUserWithUserScreen
+import com.finder.chat.presentation.all_chats.AllChatsScreen
+import com.finder.chat.presentation.chat_with_user.ChatUserWithUserScreen
 import com.example.finder.feature.profile.ProfileScreen
 
 @ExperimentalComposeUiApi

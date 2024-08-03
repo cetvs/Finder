@@ -13,7 +13,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.example.finder.presentation.theme.Pink
+import com.finder.common.theme.Pink
 
 @ExperimentalComposeUiApi
 @ExperimentalFoundationApi

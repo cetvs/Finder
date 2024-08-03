@@ -10,7 +10,7 @@ import androidx.compose.material.Surface
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import com.example.finder.presentation.navigation.BottomBar
-import com.example.finder.presentation.theme.FinderTheme
+import com.finder.common.theme.FinderTheme
 
 class HomeActivity : ComponentActivity() {
     @OptIn(ExperimentalComposeUiApi::class, ExperimentalFoundationApi::class)

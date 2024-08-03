@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.finder"
-    compileSdk = 32
+    compileSdk = 33
 
     defaultConfig {
         applicationId = "com.example.finder"
@@ -58,12 +58,6 @@ dependencies {
     // di
     implementation(libs.koin.compose)
 
-    // unit tests
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(libs.androidx.ui.test.junit4)
-
     // compose navigation
     implementation(libs.navigation.compose)
 
@@ -71,8 +65,19 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
+    // network
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
+
+    // features
+    implementation(project(":features:chat"))
+    implementation(project(":common"))
+
+    // unit tests
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(libs.androidx.ui.test.junit4)
 
     // Kotlin + coroutines
 //    implementation("androidx.work:work-runtime-ktx:$work_version")
