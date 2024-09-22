@@ -13,5 +13,4 @@ class ChatInteractor(private val chatRepository: ChatRepository) {
     fun connectWebsocketAndListen(): Flow<ChatMessage> {
         return chatRepository.connectWebsocketAndListen()
     }
-
 }

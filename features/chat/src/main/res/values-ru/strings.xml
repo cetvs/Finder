@@ -1,0 +1,5 @@
+<resources>
+    <string name="all_chats_title">Сообщение</string>
+    <string name="online">Онлайн</string>
+    <string name="offline_prefix">Был в сети</string>
+</resources>

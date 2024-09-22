@@ -27,7 +27,7 @@ import com.finder.common.theme.SwipeGray
 fun ChatRow() {
     Row {
         Image(
-            painter = painterResource(R.drawable.ic_test),
+            painter = painterResource(R.drawable.preview_user_image),
             contentDescription = "avatar",
             contentScale = ContentScale.Crop,
             modifier = Modifier

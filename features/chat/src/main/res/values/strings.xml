@@ -1,3 +1,5 @@
 <resources>
     <string name="all_chats_title">Message</string>
+    <string name="online">Online</string>
+    <string name="offline_prefix">"Last seen at "</string>
 </resources>

@@ -2,6 +2,9 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="ChatHeaderPreview">
+        <State />
+      </entry>
       <entry key="app">
         <State>
           <targetSelectedWithDropDown>
@@ -15,11 +18,8 @@
               </deviceKey>
             </Target>
           </targetSelectedWithDropDown>
-          <timeTargetWasSelectedWithDropDown value="2024-07-23T08:43:40.045247Z" />
+          <timeTargetWasSelectedWithDropDown value="2024-08-04T09:08:39.605503Z" />
         </State>
-      </entry>
-      <entry key="feature">
-        <State />
       </entry>
     </value>
   </component>

@@ -1,6 +1,7 @@
 package com.finder.chat.data
 
 import android.util.Log
+import com.finder.common.data.DataContract
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.filterNotNull
@@ -21,9 +22,18 @@ class ChatWebsocketApi {
 
     private val chatMessage = MutableStateFlow<ChatMessage?>(null)
 
+    fun sendChatMessage(messageText: String) {
+        webSocket?.send(messageText)
+    }
+
+    fun connectWebsocketAndListen(): Flow<ChatMessage> {
+        connectWebSocket()
+        return chatMessage.filterNotNull()
+    }
+
     private fun connectWebSocket() {
         val request = Request.Builder()
-            .url("ws://10.0.2.2:9000/ws_chat")
+            .url(DataContract.URL_CHAT)
             .build()
         val listener = object : WebSocketListener() {
             override fun onOpen(webSocket: WebSocket, response: Response) {
@@ -48,15 +58,6 @@ class ChatWebsocketApi {
         }
 
         webSocket = client.newWebSocket(request, listener)
-    }
-
-    fun sendChatMessage(messageText: String) {
-        webSocket?.send(messageText)
-    }
-
-    fun connectWebsocketAndListen(): Flow<ChatMessage> {
-        connectWebSocket()
-        return chatMessage.filterNotNull()
     }
 
     companion object {

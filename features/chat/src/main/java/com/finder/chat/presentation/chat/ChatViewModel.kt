@@ -1,22 +1,32 @@
-package com.example.finder.feature.chat.presentation
+package com.finder.chat.presentation.chat
 
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.finder.chat.data.ChatMessage
 import com.finder.chat.domain.ChatInteractor
 import kotlinx.coroutines.flow.SharingStarted
-import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.stateIn
 
 class ChatViewModel(private val chatInteractor: ChatInteractor) : ViewModel() {
 
-    val messages: StateFlow<ChatMessage?> = chatInteractor.connectWebsocketAndListen()
+    //TODO(profile backend)
+//    val profileData: StateFlow<ProfileData?> = Flow<ProfileData?>()
+
+    var messages = chatInteractor.connectWebsocketAndListen()
         .stateIn(
             scope = viewModelScope,
             started = SharingStarted.Lazily,
             initialValue = null
         )
+
+    fun connectToChat() {
+        messages = chatInteractor.connectWebsocketAndListen()
+            .stateIn(
+                scope = viewModelScope,
+                started = SharingStarted.Lazily,
+                initialValue = null
+            )
+    }
 
     fun sendMessage(message: String) {
         chatInteractor.sendChatMessage(message)

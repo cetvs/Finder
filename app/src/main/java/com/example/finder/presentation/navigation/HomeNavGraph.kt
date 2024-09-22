@@ -6,9 +6,9 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.finder.chat.presentation.all_chats.AllChatsScreen
-import com.finder.chat.presentation.chat_with_user.ChatUserWithUserScreen
 import com.example.finder.feature.profile.ProfileScreen
+import com.finder.chat.presentation.all_chats.AllChatsScreen
+import com.finder.chat.presentation.chat.Chat
 
 @ExperimentalComposeUiApi
 @ExperimentalFoundationApi
@@ -22,7 +22,7 @@ fun HomeNavGraph(navController: NavHostController) {
             AllChatsScreen()
         }
         composable(route = NavItem.ChooseChat.route) {
-            ChatUserWithUserScreen()
+             Chat()
         }
         composable(route = NavItem.Profile.route) {
             ProfileScreen()
